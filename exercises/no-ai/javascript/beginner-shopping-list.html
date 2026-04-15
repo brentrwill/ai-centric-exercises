@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beginner Shopping List Activity</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.5; }
+    .box { border: 1px solid #ccc; padding: 16px; margin-top: 20px; border-radius: 8px; }
+    button { padding: 10px 16px; cursor: pointer; }
+    ul { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Beginner Shopping List Activity</h1>
+  <p>This file runs in the browser and shows array and loop output on the page.</p>
+
+  <div class="box">
+    <h2>Student Tasks</h2>
+    <ol>
+      <li>Create an array called <code>shoppingList</code> with at least 5 items.</li>
+      <li>Display the full list.</li>
+      <li>Use a loop to show each item.</li>
+      <li>Create a function called <code>showListCount</code>.</li>
+      <li>Return the number of items in the array.</li>
+    </ol>
+  </div>
+
+  <button onclick="runShoppingList()">Show Shopping List</button>
+  <div id="output" class="box">Output will appear here.</div>
+
+  <script>
+    function runShoppingList() {
+      const output = document.getElementById("output");
+
+      // STUDENTS: replace this starter solution with your own work
+      const shoppingList = ["Milk", "Bread", "Eggs", "Apples", "Rice"];
+
+      function showListCount() {
+        return shoppingList.length;
+      }
+
+      let html = "<strong>Shopping List:</strong><ul>";
+      for (let i = 0; i < shoppingList.length; i++) {
+        html += "<li>" + shoppingList[i] + "</li>";
+      }
+      html += "</ul>";
+      html += "<strong>Total Items:</strong> " + showListCount();
+
+      output.innerHTML = html;
+    }
+  </script>
+</body>
+</html>

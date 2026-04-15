@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beginner About Me Activity</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.5; }
+    .box { border: 1px solid #ccc; padding: 16px; margin-top: 20px; border-radius: 8px; }
+    button { padding: 10px 16px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Beginner About Me Activity</h1>
+  <p>Students can open this page in a browser and click the button to run their code.</p>
+
+  <div class="box">
+    <h2>Student Tasks</h2>
+    <ol>
+      <li>Create variables for your name, age, and favorite hobby.</li>
+      <li>Print or display each value.</li>
+      <li>Create a function called <code>introduceYourself</code>.</li>
+      <li>Return a sentence using your variables.</li>
+      <li>Display the result on the page.</li>
+    </ol>
+  </div>
+
+  <button onclick="runAboutMe()">Show Introduction</button>
+  <div id="output" class="box">Output will appear here.</div>
+
+  <script>
+    function runAboutMe() {
+      const output = document.getElementById("output");
+
+      // STUDENTS: replace this starter solution with your own work
+      const myName = "Alex";
+      const myAge = 21;
+      const favoriteHobby = "drawing";
+
+      function introduceYourself() {
+        return "Hi, my name is " + myName + ". I am " + myAge + " years old and I enjoy " + favoriteHobby + ".";
+      }
+
+      output.textContent = introduceYourself();
+    }
+  </script>
+</body>
+</html>

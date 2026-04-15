@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Chat Helper Activity</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.5; }
+    .box { border: 1px solid #ccc; padding: 16px; margin-top: 20px; border-radius: 8px; }
+    button { padding: 10px 16px; cursor: pointer; }
+    #output { margin-top: 15px; white-space: pre-line; }
+  </style>
+</head>
+<body>
+  <h1>AI Chat Helper Activity</h1>
+  <p>Open this file in a browser and complete the tasks inside the script section.</p>
+
+  <div class="box">
+    <h2>Student Tasks</h2>
+    <ol>
+      <li>Create a variable called <code>appName</code>.</li>
+      <li>Create a function called <code>greetUser</code>.</li>
+      <li>Create an array called <code>features</code> with at least 3 items.</li>
+      <li>Use a loop to display each feature.</li>
+      <li>Create an object called <code>aiTool</code>.</li>
+    </ol>
+  </div>
+
+  <button onclick="runActivity()">Run Activity</button>
+  <div id="output" class="box">Output will appear here.</div>
+
+  <script>
+    function runActivity() {
+      const output = document.getElementById("output");
+
+      // STUDENTS: replace this starter solution with your own work
+      const appName = "SmartWriter AI";
+
+      function greetUser() {
+        return "Welcome to " + appName + "!";
+      }
+
+      const features = ["Text generation", "Idea suggestions", "Grammar help"];
+
+      const aiTool = {
+        name: appName,
+        version: "1.0",
+        purpose: "Help users write faster"
+      };
+
+      let result = greetUser() + "\n\nFeatures:\n";
+      for (let i = 0; i < features.length; i++) {
+        result += "- " + features[i] + "\n";
+      }
+
+      result += "\nTool Info:\n";
+      result += "Name: " + aiTool.name + "\n";
+      result += "Version: " + aiTool.version + "\n";
+      result += "Purpose: " + aiTool.purpose;
+
+      output.textContent = result;
+    }
+  </script>
+</body>
+</html>

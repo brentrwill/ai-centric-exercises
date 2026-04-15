@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Prompt Score Activity</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.5; }
+    .box { border: 1px solid #ccc; padding: 16px; margin-top: 20px; border-radius: 8px; }
+    button { padding: 10px 16px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>AI Prompt Score Activity</h1>
+  <p>This browser-based activity lets students test prompt scoring logic.</p>
+
+  <div class="box">
+    <h2>Student Tasks</h2>
+    <ol>
+      <li>Create a variable called <code>promptText</code>.</li>
+      <li>Create a variable called <code>score</code>.</li>
+      <li>Write a function called <code>evaluatePrompt</code>.</li>
+      <li>If the score is 8 or higher, return <code>Strong prompt</code>.</li>
+      <li>Otherwise, return <code>Needs improvement</code>.</li>
+    </ol>
+  </div>
+
+  <button onclick="runScore()">Check Prompt Score</button>
+  <div id="output" class="box">Output will appear here.</div>
+
+  <script>
+    function runScore() {
+      const output = document.getElementById("output");
+
+      // STUDENTS: replace this starter solution with your own work
+      const promptText = "Write a short product description for a new AI notebook.";
+      const score = 9;
+
+      function evaluatePrompt(scoreValue) {
+        if (scoreValue >= 8) {
+          return "Strong prompt";
+        } else {
+          return "Needs improvement";
+        }
+      }
+
+      output.innerHTML =
+        "<strong>Prompt:</strong> " + promptText + "<br><br>" +
+        "<strong>Score:</strong> " + score + "<br>" +
+        "<strong>Evaluation:</strong> " + evaluatePrompt(score);
+    }
+  </script>
+</body>
+</html>
